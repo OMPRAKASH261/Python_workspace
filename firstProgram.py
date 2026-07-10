@@ -164,3 +164,15 @@ else:
         print("wrong username")
     else:
         print("wrong password")
+        
+# Match case
+color = input("enter color: ")
+match color:
+    case "Green":
+        print("go")
+    case "Yellow":
+        print("look")
+    case "Red":
+        print("stop")
+    case _:
+        print("wrong color!")
