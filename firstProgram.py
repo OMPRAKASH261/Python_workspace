@@ -81,10 +81,10 @@ val = bool(-10)  # 0(zero) always False, and non-zero(even val is negative or po
 print(val, type(val))
 
 # User input
-# a = input("enter value of a: ")
-# print(a)
-# username = input("enter your name: ")
-# print("welcome", username)
+a = input("enter value of a: ")
+print(a)
+username = input("enter your name: ")
+print("welcome", username)
 
 # -> sum of 2 nums
 # a = input("enter a: ")
@@ -97,3 +97,70 @@ b = int(input("enter b: "))
 sum = a + b
 print(sum)  # a and b are string then they don't add instead give ab.
 
+
+# conditional statements
+# -> if
+age = 34
+if age >= 18:
+    print("you can vote")
+    
+# # -> else
+age = int(input("enter age: "))
+if age >= 18:
+    print("you can vote")
+    print("you can drive")
+else:
+    print("you can't vote")
+
+# -> elif
+color = input("enter color: ")
+if color == "red":
+    print("stop")
+elif color == "green":
+    print("go")
+elif color == "yellow":
+    print("wait")
+else:
+    print("wrong color for traffic lights")
+
+
+# -> persenoality check
+age = int(input("enter age: "))
+
+if (age < 13):
+    print("child")
+elif (age >= 13 and age < 18):
+    print("teenager")
+else:
+    print("adult")
+
+# -> login and password check (user authentcation)
+username = input("enter username: ")
+password = input("enter password: ")
+
+if (username == "admin" and password == "pass"):
+    print("LOGIN Successful!")
+elif (username != "admin"):
+    print("Wrong Username")
+else:
+    print("Wrong Password")
+    
+# -> check multiple or not
+n = int(input("enter num: "))
+
+if (n % 5 == 0):
+    print("multiple of 5")
+else:
+    print("not multiple of 5")
+    
+# Nesting
+username = input("enter username: ")
+password = input("enter password: ")
+
+if (username == "admin" and password == "pass"):
+    print("successs")
+else:
+    if (username != "admin"):
+        print("wrong username")
+    else:
+        print("wrong password")
