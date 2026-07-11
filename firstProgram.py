@@ -176,3 +176,63 @@ match color:
         print("stop")
     case _:
         print("wrong color!")
+
+# loops
+# -> infiinite loops
+while True:
+    print("hello world")
+    
+# -> finite loop
+
+count = 1 #iterator/counter variable
+while (count <= 5):
+    print("hello world", count)
+    count += 1
+
+print("after loop, count =", count)
+
+# -> 1 to 5
+i = 1  # iterator
+while (i <= 5):
+    print(i)
+    i += 1
+
+# -> 5 to 1
+i = 5
+while (i >= 1):
+    print(i)
+    i -= 1
+
+
+# mulitplication table of any num
+
+n = int(input("enter num: "))
+# i = 1
+# while (i <= 10):
+#     print(n * i)
+#     i += 1
+
+# -> if start form 0
+i = 0
+while (i < 10):
+    print(n * (i+1))
+    i += 1
+
+# -> break
+i = 1
+while (i <= 10):
+    if (i % 6 == 0):
+        break
+    print(i)
+    i += 1
+print("outside loop now......")
+
+# -> continue
+i = 1
+while (i <= 10):
+    if (i % 3 == 0):
+        i += 1
+        continue # skip multiple of 3
+    print(i)
+    i += 1
+print("outside loop.....")
