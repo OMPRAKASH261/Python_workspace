@@ -236,3 +236,65 @@ while (i <= 10):
     print(i)
     i += 1
 print("outside loop.....")
+
+# For Loop
+string = "hello"
+# in => membership operator (check presence)
+for var in string:
+    print(var)
+
+# check o is in string or not   
+string = "hello"
+if 'o' in string:
+    print("o exists in string")
+
+# print AI 5 times   
+for i in range(5):  # 0 to n-1
+    # print(i)
+    print("AI")
+
+# count the no of words   
+word = "artificial intelligence"
+count = 0
+for ch in word:
+    if(ch == 'i'):
+        count += 1
+print("count of i =", count)
+
+# Range() funciion
+for i in range(5):
+    print(i)
+for i in range(1, 6):
+    print(i)
+for i in range(1, 10, 2): # odd no
+    print(i)
+for i in range(2, 11, 2): # even no
+    print(i)
+
+# Funtions
+def hello(): #fnx definiton
+    print("hello")
+    print("from python")
+hello()  #fnx call
+hello()  #fnx call
+
+# funciion definition
+def sum(a, b): #parameters
+    s = a + b
+    return s
+
+print(sum(3, 4)) #fnx call  (3, 4) are arguments
+
+# non-defaut variabe always in start, default variable can't in start
+def sum(a, b = 1):
+    return a + b
+
+print(sum(5))
+print(sum(4, 5))
+
+# lambda function
+sum = lambda a,b: a+b
+print(sum(5,6))
+
+avg = lambda a,b: (a+b)/2
+print(avg(4,5))
