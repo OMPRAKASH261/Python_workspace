@@ -298,3 +298,33 @@ print(sum(5,6))
 
 avg = lambda a,b: (a+b)/2
 print(avg(4,5))
+
+
+# Strings -> immutable cant we change
+word = "python"
+print(len(word))
+
+word1 = "I love"
+word2 = "python"
+word3 = "programing"
+sentence = word1 + " " + word3
+print(word1 + " " + word2) #concatenate
+print(sentence)
+
+word = "hello" 
+print(word[2])  # indexing
+
+word = "Delhi"
+for ch in word:
+    print(ch)
+
+# slicing
+word = "I study from ApnaCollege"
+print(word[13:25])
+print(word[17:])
+print(word[13:len(word)])
+print(word[:len(word)])
+print(word[:])
+
+word = "Python"
+print(word[-4:-2])
