@@ -178,9 +178,9 @@ match color:
         print("wrong color!")
 
 # loops
-# -> infiinite loops
-while True:
-    print("hello world")
+# # -> infiinite loops
+# while True:
+#     print("hello world")
     
 # -> finite loop
 
@@ -328,3 +328,122 @@ print(word[:])
 
 word = "Python"
 print(word[-4:-2])
+
+# Formatting
+a = 5
+b = 10
+sum = a + b
+# normal formatting
+print("sum is {}".format(sum)) #normal format
+print("language is {}".format("python"))
+print("sum of {} & {} is {}".format(a, b, sum))
+
+# index based formatting
+print("sum of {1} & {0} is {2}".format(a, b, sum))
+
+# value based formatting -> resuse the variable
+print("values of vars {a} & {b}".format(a=5, b=10))
+
+# f-strings
+a = 5
+b = 10
+
+print(f"sum of {a} & {b} is {a + b}")
+print(f"avg of {a} & {b} is {(a + b)/2}")
+
+
+# Lists
+marks = [99, 89, 100, 35, 93, "abc", 49.03]
+print(marks)
+print(len(marks))
+print(marks[2])
+marks[2] = 79
+print(marks)
+
+# -> Slicing in list
+marks = [99, 89, 100, 35, 93, "abc", 49.03]
+print(marks[0:5]) #indexing
+print(marks[:5])
+print(marks[5:len(marks)])
+print(marks[5:])
+print(marks[-5:-2]) #negative indexing
+print(marks[: : -1]) #Reverse list
+
+
+# Method->function in list
+nums = [1, 2, 3]
+nums.append(4)
+print(nums)
+nums.insert(2, 10)
+print(nums)
+nums.sort()
+print(nums)
+nums.sort(reverse=True)
+print(nums)
+nums.reverse()
+print(nums)
+
+# loops
+nums = [1, 2, 3, 5, 19, 7]
+for val in nums:
+    print(val)
+    
+    
+nums = [1, 2, 3, 10, 4] # linear search
+x = 10
+idx = 0
+for val in nums:
+    if(val == x):
+        print(f"{x} found at idx={idx}")
+        break
+    idx += 1
+    
+    
+# Tuples -> immutable sequence of values
+tup = (1, 2, 3, 4, 5, "abc", 3.14)
+print(tup)
+print(type(tup))
+print(len(tup))
+print(tup[2])
+
+tup = (4)
+tup1 = (4,)
+tup2 = ("abc")
+tup3 = ("abc",)
+print(type(tup))
+print(type(tup1))
+print(type(tup2))
+print(type(tup3))
+
+tup = (1, 2, 3, 4, 5)
+print(tup[:3])
+ 
+tup = (1, 2, 3, 4, 6) # loop
+for val in tup:
+    print(val)
+    
+tup = (1, 2, 3, 4, 5)
+sum = 0
+for val in tup:
+    sum += val
+    
+print(f"sum of vals is {sum}")
+
+
+# Methods
+tup = (1, 2, 2, 3, 2, 4)
+print(tup.index(2))  #index -> returns 1st occurence idx
+print(tup.count(2))  #count -> counts total occurences
+
+# Dictionary
+info = {
+    "name": "Omprakash",
+    "cgpa": 9.0,
+    "subjects": ["math", "science"],
+    3.14: "PI"
+}
+print(type(info))
+print(info["name"])
+print(info[3.14])
+info["cgpa"] = 9.4
+print(info["cgpa"])
