@@ -447,3 +447,63 @@ print(info["name"])
 print(info[3.14])
 info["cgpa"] = 9.4
 print(info["cgpa"])
+
+# -> Method
+info = {
+    "name": "Omprakash",
+    "cgpa": 9.0,
+    "subjects": ["math", "science"],
+    3.14: "PI"
+}
+print(info.keys())
+dict_keys = info.keys()
+dict_keys1 = list(info.keys()) #convert into list
+print(dict_keys)
+print(dict_keys1)
+print(type(dict_keys1))
+
+dict_vals = list(info.values())
+dict_vals1 = info.values()
+print(dict_vals)
+print(dict_vals1)
+
+print(info.items())
+
+print(info.get("cgpa"))
+print(info.get("cgpa2"))
+print("End of code")
+
+# print(info["cgpa2"]) #wrong key -> give error
+# print("End of code")
+
+info.update({
+    "city": "Delhi"
+})
+print(info)
+
+# sets
+s = {1, 2, 2, 2, 3}
+print(s)
+print(type(s))
+print(len(s))
+
+
+empty_set = {}
+print(type(empty_set))
+empty_set = set()
+print(type(empty_set))
+
+s.add(5)
+print(s)
+s.remove(1)
+print(s)
+s.clear()
+s = {1, 2, 3}
+print(s)
+s.pop()
+print(s)
+
+s1 = {1, 2, 3, 4, 5}
+s2 = {4, 5, 6, 8, 10}
+print(s1.union(s2))
+print(s1.intersection(s2))
