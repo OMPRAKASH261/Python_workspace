@@ -493,11 +493,12 @@ print(type(empty_set))
 empty_set = set()
 print(type(empty_set))
 
-s.add(5)
+s.add(6)
 print(s)
 s.remove(1)
 print(s)
 s.clear()
+print(s)
 s = {1, 2, 3}
 print(s)
 s.pop()
@@ -507,3 +508,16 @@ s1 = {1, 2, 3, 4, 5}
 s2 = {4, 5, 6, 8, 10}
 print(s1.union(s2))
 print(s1.intersection(s2))
+
+
+# OOP (Object oriented Programming)
+class Student:
+    subject = "Python"
+    college = "ABC"
+    year = "4th year"
+stu1 = Student()
+stu2 = Student()
+print(stu1)
+print(type(stu1))
+print(stu1.subject, stu1.college, stu1.year)
+print(stu2.subject, stu2.college, stu2.year)

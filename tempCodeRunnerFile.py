@@ -1,6 +1,4 @@
-# -> Slicing in list
-# print(marks[0:5]) #indexing
-# print(marks[:5])
-# print(marks[5:len(marks)])
-# print(marks[5:])
-# print(marks[-5:-2]) #negative indexing
+s1 = {1, 2, 3, 4, 5}
+s2 = {4, 5, 6, 8, 10}
+print(s1.union(s2))
+print(s1.intersection(s2))
