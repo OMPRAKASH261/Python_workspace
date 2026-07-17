@@ -521,3 +521,88 @@ print(stu1)
 print(type(stu1))
 print(stu1.subject, stu1.college, stu1.year)
 print(stu2.subject, stu2.college, stu2.year)
+
+
+# -> Constructor
+class Student:
+    def __init__(self):
+        print("constructor was called...")
+    
+stu1 = Student()
+stu2 = Student()
+stu3 = Student()
+
+## -> Type - (default, parameterized)
+class Student:
+    # in python we cannot create multiple contrutor in one class.
+    def __init__(self):  # default
+        print("obj is being construted..")
+        
+    def __init__(self, name, cgpa):  # Parameterized
+        self.name = name
+        self.cgpa = cgpa
+
+    def get_cgpa(self):  
+        return self.cgpa
+stu1 = Student("Rahul", 9.0)
+stu2 = Student("Uravashi", 8.4)
+stu3 = Student("Shardha", 9.2)
+
+print(stu1.name, stu1.cgpa)
+print(stu2.name)
+print(stu3.cgpa)
+
+
+print(stu1.get_cgpa())
+print(f"{stu1.name} has cgpa = {stu1.get_cgpa()}")
+
+# -> Attributes - (class, instance)
+class Student:
+    college_name = "ABC college" #class
+    PI = 3.1
+
+    def __init__(self, name, gpa):
+        self.name = name  # instance
+        self.gpa = gpa
+        self.PI = 3.14
+     
+stu1 = Student("Rahul", 9.3)   
+
+print(stu1.name)
+# print(Student.name) # give error
+print(Student.college_name)
+print(stu1.college_name)
+
+print(stu1.PI)
+print(Student.PI)
+
+## -> Methods
+class Laptop:
+    storage_type = "ssd"
+    
+    def __init__(self, RAM, storage):
+        self.RAM = RAM
+        self.storage = storage
+    
+    @classmethod
+    def get_storage_type(cls):
+        print(f"storage type = {cls.storage_type}")
+        
+    def get_info(self):  # instance method
+        print(f"laptop has {self.RAM} RAM & {self.storage} {self.storage_type}")
+        
+    @staticmethod
+    def calc_discount(price, discount):
+        final_price = price - (discount * price/100)
+        print(f"discounted price = {final_price}")
+
+l1 = Laptop("16gb", "512gb")
+
+# -> instance method
+l1.get_info()
+# ->class method
+Laptop.get_storage_type()
+l1.get_storage_type()
+# -> Static method
+l1.calc_discount(40000, 10)
+
