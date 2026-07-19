@@ -653,7 +653,6 @@ t1.change_time("5pm")
 print(t1.subject, t1.start_time, t1.end_time)
 
 staff1 = AdminStaff("manger")
-
 print(staff1.role, staff1.start_time, staff1.end_time)
     
     
@@ -672,7 +671,6 @@ class Accountant(AdminStaff):
         self.salary = salary
         
 acc1 = Accountant(25_000, "CA")
-
 print(acc1.role, acc1.salary, acc1.start_time, acc1.end_time)
 
 
@@ -694,3 +692,55 @@ class TA(Teacher, Student):
 ta1 = TA(15_000, 9.3, "Omprakash")
 print(ta1.name, ta1.gpa, ta1.salary)
 
+
+## -> Abstraction
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass
+    
+class Lion(Animal):
+    def make_sound(self):
+        print("Roar!")
+        
+class Cow(Animal):
+    def make_sound(self):
+        print("Moo!")
+
+lion = Lion()
+lion.make_sound()
+
+cow = Cow()
+cow.make_sound()
+
+
+## -> Ploymorphism
+#-> Function Overrriding
+class Employee:
+    def get_designation(self):
+        print("designation = Empoyee")
+        
+class Teacher(Employee):
+    def get_designation(self):
+        print("designation = Teacher")
+        
+t1 = Teacher()
+t1.get_designation()
+
+
+#-> Duck Typing
+class Teacher():
+    def get_designation(self):
+        print("designation = Teacher")
+
+class Accountant():
+    def get_designation(self):
+        print("designation = Accountant")
+        
+t1 = Teacher()
+t1.get_designation()
+
+acc1 = Accountant()
+acc1.get_designation()
