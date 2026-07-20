@@ -1,1 +1,2 @@
-t1.change_time("5pm")
+data = f.readline()
+print(data)
