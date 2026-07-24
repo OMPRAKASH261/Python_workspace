@@ -745,6 +745,7 @@ t1.get_designation()
 acc1 = Accountant()
 acc1.get_designation()
 
+
 ## Expection Handling
 try:
     x = int(input("enter x: "))
@@ -755,3 +756,23 @@ except ValueError:
     print(f"Invalid input")
 else:
     print(f"ans = {ans}")
+
+## List Comprehensions
+squares = []
+for i in range(6):
+    squares.append(i*i)
+print(squares)
+
+sq = [i*i for i in range(6)] # list comprehensions
+print(sq)
+
+sqo = [i*i for i in range(6) if i%2 != 0] # only odd number square in list
+print(sqo)
+
+nums = [-2, -3, 3, 4, -1, 7]
+nums = [0 if val < 0 else val for val in nums]
+print(nums)
+
+words = {"hello", "python", "apancollege"}
+words = [val.upper() for val in words]
+print(words)
